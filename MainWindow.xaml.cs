@@ -27,6 +27,7 @@ namespace MunicipalityReports
         public MainWindow()
         {
             InitializeComponent();
+            mr = new MR();
         }
 
         private void OpenFileDialog(object sender, RoutedEventArgs e)
@@ -36,6 +37,7 @@ namespace MunicipalityReports
             {
                 String[] lines = File.ReadAllLines(fileDialog.FileName);
                 addMunicipalities(lines);
+                dgMunicipalities.ItemsSource = mr.municipalities;
             }
         }
 
