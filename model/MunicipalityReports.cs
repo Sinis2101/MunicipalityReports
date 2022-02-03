@@ -23,5 +23,19 @@ namespace MunicipalityReports.model
             municipalities.Add(m);
         }
 
+        public List<Municipality> filterMunicipalities(String filter)
+        {
+            List<Municipality> filteredList = new List<Municipality>();
+
+            foreach (Municipality municipality in municipalities)
+            {
+                if(municipality.type == filter)
+                {
+                    filteredList.Add(municipality);
+                }
+            }
+            return filteredList;
+        }
+
     }
 }

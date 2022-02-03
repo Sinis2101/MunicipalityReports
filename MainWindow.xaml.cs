@@ -28,7 +28,6 @@ namespace MunicipalityReports
         {
             InitializeComponent();
             mr = new MR();
-            addFilters();
         }
 
         private void OpenFileDialog(object sender, RoutedEventArgs e)
@@ -39,6 +38,8 @@ namespace MunicipalityReports
                 String[] lines = File.ReadAllLines(fileDialog.FileName);
                 addMunicipalities(lines);
                 dgMunicipalities.ItemsSource = mr.municipalities;
+                addFilters();
+                cbFilter.IsEnabled = true;
             }
         }
 
@@ -55,6 +56,12 @@ namespace MunicipalityReports
             cbFilter.Items.Add("Municipio");
             cbFilter.Items.Add("Isla");
             cbFilter.Items.Add("Área no municipalizada");
+        }
+
+        private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            String filter = cbFilter.SelectedItem.ToString();
+            dgMunicipalities.ItemsSource = mr.filterMunicipalities(filter);
         }
     }
 }
