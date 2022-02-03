@@ -9,5 +9,6 @@
     <Grid>
         <Button Content="Choose File" Click="OpenFileDialog" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="80" RenderTransformOrigin="-1.326,-3.181" Margin="10,10,0,0"/>
         <DataGrid x:Name="dgMunicipalities" AutoGenerateColumns="True" IsReadOnly="True" Margin="0,51,0,0"/>
+        <ComboBox x:Name="cbFilter" Width="160" Height="30" Text="Filter" Margin="107,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Window>
