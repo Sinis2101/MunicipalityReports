@@ -40,6 +40,7 @@ namespace MunicipalityReports
                 dgMunicipalities.ItemsSource = mr.municipalities;
                 addFilters();
                 cbFilter.IsEnabled = true;
+                btnChart.IsEnabled = true;
             }
         }
 
@@ -62,6 +63,12 @@ namespace MunicipalityReports
         {
             String filter = cbFilter.SelectedItem.ToString();
             dgMunicipalities.ItemsSource = mr.filterMunicipalities(filter);
+        }
+
+        private void OpenChart(object sender, RoutedEventArgs e)
+        {
+            ChartWindow chartWindow = new ChartWindow();
+            chartWindow.Show();
         }
     }
 }
