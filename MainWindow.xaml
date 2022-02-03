@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MunicipalityReports"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Municipality Reports" Height="450" Width="800">
     <Grid>
         <Button Content="Choose File" Click="OpenFileDialog" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="80" RenderTransformOrigin="-1.326,-3.181" Margin="10,10,0,0"/>
         <DataGrid x:Name="dgMunicipalities" AutoGenerateColumns="True" IsReadOnly="True" Margin="0,51,0,0"/>

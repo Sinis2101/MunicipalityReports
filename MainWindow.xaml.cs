@@ -67,7 +67,7 @@ namespace MunicipalityReports
 
         private void OpenChart(object sender, RoutedEventArgs e)
         {
-            ChartWindow chartWindow = new ChartWindow();
+            ChartWindow chartWindow = new ChartWindow(mr);
             chartWindow.Show();
         }
     }
